@@ -18,7 +18,7 @@ export default function Footer() {
   }
 
   return (
-    <div className="flex flex-row justify-around w-full h-auto p-4 bg-footerBackground">
+    <div className="flex flex-row justify-around w-full h-auto p-4 bg-foreground">
       <div>
         <BaseButton variant="text" onClick={handleNavHome}>
           Home
