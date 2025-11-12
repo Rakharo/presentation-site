@@ -1,6 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
-import BaseButton from "../BaseButton";
+import BaseButton from "../ui/BaseButton";
 
 export default function Footer() {
   const router = useRouter();

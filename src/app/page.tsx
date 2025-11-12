@@ -1,10 +1,13 @@
 "use client";
-import BaseButton from "@/components/BaseButton";
-import MessageForm from "@/components/utils/MessageForm";
+import MessageForm from "@/components/MessageForm";
+import { iMusics } from "@/interfaces/spotifyInterface";
 import { iUser } from "@/interfaces/userInterface";
+import { getTopMusics } from "@/services/spotifyService";
 import { createUser, getUsers } from "@/services/userService";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { SpotifyMusics } from "@/components/SpotifyMusics";
+import { SpotifyArtists } from "@/components/SpotifyArtists";
 
 export default function Home() {
   const router = useRouter();
@@ -12,11 +15,10 @@ export default function Home() {
   const [users, setUsers] = useState<iUser[]>([]);
   const [loading, setLoading] = useState(true);
 
-
   const handleSend = async (data: iUser) => {
-    const response = await createUser(data)
+    const response = await createUser(data);
 
-    return console.log(response)
+    return console.log(response);
   };
 
   async function handleGetUsers() {
@@ -45,6 +47,9 @@ export default function Home() {
           <span>Nenhum usuário encontrado.</span>
         )}
       </div>
+
+      <SpotifyMusics />
+      <SpotifyArtists />
       <MessageForm onSend={handleSend} />
     </div>
   );

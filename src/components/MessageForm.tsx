@@ -2,7 +2,7 @@
 import React, { useState, FormEvent } from "react";
 import { TextField, FormHelperText, FormLabel, Grid, InputAdornment } from "@mui/material";
 import { z } from "zod";
-import FormSkeleton from "../BaseForm";
+import FormSkeleton from "./ui/BaseForm";
 import { formatPhone } from "@/utils/formatter";
 import { Email, Person, Phone } from "@mui/icons-material";
 

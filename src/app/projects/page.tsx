@@ -1,7 +1,7 @@
 'use client';
 
-import BaseButton from "@/components/BaseButton";
-import BaseSelect from "@/components/BaseSelect";
+import BaseButton from "@/components/ui/BaseButton";
+import BaseSelect from "@/components/ui/BaseSelect";
 import { useRouter } from "next/navigation";
 
 export default function Interests() {
